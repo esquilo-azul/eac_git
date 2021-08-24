@@ -6,7 +6,7 @@ require 'eac_git/rspec/stubbed_git_local_repo'
 module EacGit
   module Rspec
     module Setup
-      def self.perform(setup_obj)
+      def self.extended(setup_obj)
         setup_obj.setup_conditional_git
         setup_obj.setup_stubbed_git_local_repo
       end
