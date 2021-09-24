@@ -63,6 +63,12 @@ module EacGit
       ::EacGit::Local::Subrepo.new(self, subpath)
     end
 
+    # @return [Array<EacGit::Local::Subrepo>]
+    def subrepos
+      command('subrepo', '-q', 'status').execute!.split("\n").map(&:strip).select(&:present?)
+                                        .map { |subpath| subrepo(subpath) }
+    end
+
     def to_s
       "#{self.class}[#{root_path}]"
     end
