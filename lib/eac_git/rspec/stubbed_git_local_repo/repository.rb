@@ -3,7 +3,7 @@
 require 'eac_git/local'
 require 'eac_git/rspec/stubbed_git_local_repo/directory'
 require 'eac_git/rspec/stubbed_git_local_repo/file'
-require 'eac_ruby_utils/core_ext'
+require 'eac_ruby_utils'
 require 'securerandom'
 
 module EacGit

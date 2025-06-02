@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/envs'
+require 'eac_ruby_utils'
 require 'tmpdir'
 
 module EacGit
