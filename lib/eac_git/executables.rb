@@ -26,7 +26,7 @@ module EacGit
 
       module GitCommandExtensions
         def command(*args)
-          super(*args).envvar('PATH', path_with_git_subrepo)
+          super.envvar('PATH', path_with_git_subrepo)
         end
 
         def gem_root

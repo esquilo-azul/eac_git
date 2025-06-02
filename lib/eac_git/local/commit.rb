@@ -53,7 +53,7 @@ module EacGit
 
       # @return [Array<EacGit::Local::Commit>]
       def parents
-        format('%P').each_line.map { |line| repo.commitize(line) }
+        format('%P').each_line.map { |line| repo.commitize(line) } # rubocop:disable Style/RedundantFormat
       end
 
       def root_child?
