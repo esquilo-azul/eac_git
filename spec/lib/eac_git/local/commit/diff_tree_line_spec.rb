@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/local/commit/diff_tree_line'
-
 RSpec.describe EacGit::Local::Commit::DiffTreeLine, :git do
   include_examples 'source_target_fixtures', __FILE__ do
     def source_data(source_file)

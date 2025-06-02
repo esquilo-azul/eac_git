@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/local'
-require 'eac_git/local/commit'
 require 'tmpdir'
 
 RSpec.describe EacGit::Local, '#dirty_files', :git do
