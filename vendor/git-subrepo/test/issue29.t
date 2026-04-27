@@ -40,7 +40,7 @@ cd "$TMP"
   touch main1
   git add main1
   git commit -m "Initial main1"
-  git subrepo clone ../share share -b master
+  git subrepo clone ../share share -b "$DEFAULTBRANCH"
 ) > /dev/null
 
 # `subrepo clone` the share repo into main2:
@@ -49,7 +49,7 @@ cd "$TMP"
   touch main2
   git add main2
   git commit -m "Initial main2"
-  git subrepo clone ../share share -b master
+  git subrepo clone ../share share -b "$DEFAULTBRANCH"
 ) > /dev/null
 
 
@@ -64,7 +64,7 @@ msg_main1="main1 initial add to subrepo"
   git subrepo push share
 ) &> /dev/null
 
-ok "`! git:branch-exists "subrepo-push/share"`" \
+ok "$(! git:branch-exists "subrepo-push/share")" \
   "The subrepo-push/share branch was deleted after push"
 
 # TODO Check the state of refs made

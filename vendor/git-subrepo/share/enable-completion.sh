@@ -1,4 +1,4 @@
-#!bash
+# shellcheck shell=bash
 
 # Enable git-subrepo completion facilities
 if [[ -n ${BASH_VERSION-} ]]; then
@@ -19,7 +19,7 @@ if [[ -n ${BASH_VERSION-} ]]; then
         # If a file is found at the location being checked…
         if [[ -f $f ]]; then
           # …source it.
-          source $f
+          source "$f"
           [[ $(type -t __gitcomp) != function ]] &&
             echo "WARNING: Git completion script '$f' does not provide a '__gitcomp' function"
           # Proceed to loading our Bash completion facilities.
@@ -46,5 +46,5 @@ elif [[ -n ${ZSH_VERSION-} ]]; then
   # Prepend to `fpath` the path of the directory containing our zsh
   # completion script, so that our completion script will be hooked into the
   # zsh completion system.
-  fpath=($GIT_SUBREPO_ROOT/share/zsh-completion $fpath)
+  fpath=("$GIT_SUBREPO_ROOT/share/zsh-completion" "${fpath[@]}")
 fi
