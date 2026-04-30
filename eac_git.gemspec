@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,vendor}/**/*']
   s.required_ruby_version = '>= 2.7'
 
-  s.add_dependency 'eac_ruby_utils', '~> 0.128', '>= 0.128.3'
+  s.add_dependency 'eac_ruby_utils', '~> 0.131'
   s.add_dependency 'parseconfig', '~> 1.1', '>= 1.1.2'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.2'
 end
