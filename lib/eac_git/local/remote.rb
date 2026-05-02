@@ -46,7 +46,13 @@ module EacGit
 
       # @return [String]
       def url=(new_url)
-        url_set(new_url)
+        case [exist?, new_url.present?]
+        when [false, false] # do nothing
+        when [false, true] then add(new_url)
+        when [true, false] then remove
+        when [true, true] then url_set(new_url)
+        else ibr
+        end
       end
 
       # @return [String, nil]
