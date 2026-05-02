@@ -21,8 +21,6 @@ module EacGit
         r << '--bare' if bare
         r + [path]
       end
-
-      require_sub __FILE__
     end
   end
 end

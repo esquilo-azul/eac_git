@@ -2,7 +2,6 @@
 
 module EacGit
   module RemoteLike
-    require_sub __FILE__
     enable_abstract_methods
 
     # @return [String] The output of command "git fetch".

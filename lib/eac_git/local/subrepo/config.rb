@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'parseconfig'
+
 module EacGit
   class Local
     class Subrepo
