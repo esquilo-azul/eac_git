@@ -34,6 +34,11 @@ module EacGit
         name
       end
 
+      # @return [String]
+      def remove
+        local.command('remote', 'remove', name).execute!
+      end
+
       # @return [String, nil]
       def url
         local.command('remote', 'get-url', name)
