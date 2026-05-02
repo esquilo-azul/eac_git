@@ -15,8 +15,9 @@ module EacGit
         local.command('remote', 'add', name, url).execute!
       end
 
+      # @return [Boolean]
       def exist?
-        url
+        url.present?
       end
 
       # @return [EacRubyUtils::Envs::Command
