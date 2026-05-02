@@ -46,12 +46,18 @@ module EacGit
 
       # @return [String]
       def url=(new_url)
-        local.command('remote', 'set-url', name, new_url).execute!
+        url_set(new_url)
       end
 
       # @return [String, nil]
       def url_get(**)
         local.command('remote', 'get-url', name).execute!(**)
+      end
+
+      # @param url [String]
+      # @return [String]
+      def url_set(url)
+        local.command('remote', 'set-url', name, url).execute!
       end
     end
   end
