@@ -10,6 +10,11 @@ module EacGit
 
       common_constructor :local, :name
 
+      # @return [String]
+      def add(url)
+        local.command('remote', 'add', name, url).execute!
+      end
+
       def exist?
         url
       end
