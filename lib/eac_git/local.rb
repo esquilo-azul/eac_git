@@ -83,8 +83,8 @@ module EacGit
       refs.first
     end
 
-    def command(*args)
-      ::EacGit::Executables.git.command('-C', root_path.to_path, *args)
+    def command(*)
+      ::EacGit::Executables.git.command('-C', root_path.to_path, *)
     end
 
     def raise_error(message)

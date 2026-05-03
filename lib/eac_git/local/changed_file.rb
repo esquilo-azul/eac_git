@@ -3,8 +3,8 @@
 module EacGit
   class Local
     class ChangedFile
-      QUOTED_PATH_PATTERN = /\A"(.+)"\z/.freeze
-      STATUS_LINE_PATTERN = /\A(.)(.)\s(.+)\z/.freeze
+      QUOTED_PATH_PATTERN = /\A"(.+)"\z/
+      STATUS_LINE_PATTERN = /\A(.)(.)\s(.+)\z/
       TO_HASH_ATTRIBUTES = %i[absolute_path index path worktree].freeze
 
       class << self

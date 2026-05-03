@@ -15,8 +15,8 @@ module EacGit
       end
 
       # @return [EacRubyUtils::Envs::Command
-      def git_command(*args)
-        local.command(*args)
+      def git_command(*)
+        local.command(*)
       end
 
       # @return [EacGit::Local::Remote::Push]
