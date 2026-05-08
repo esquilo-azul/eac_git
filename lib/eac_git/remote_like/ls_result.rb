@@ -12,6 +12,7 @@ module EacGit
       end
 
       common_constructor :hashes
+      compare_by :hashes
       delegate :fetch, :[], :count, :any?, :empty?, to: :hashes
     end
   end
